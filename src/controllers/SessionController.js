@@ -6,7 +6,8 @@ module.exports = {
             id
         } = req.body
 
-        const ong = await connection('ong')
+        console.log(id)
+        const ong = await connection('ongs')
             .select('name')
             .where("id", id)
             .first()
